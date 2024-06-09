@@ -1,5 +1,5 @@
 import { Suspense, type PropsWithChildren } from 'react'
-import { Box, HStack, Spinner } from '@channel.io/bezier-react'
+import { Box, Center, HStack, Spinner } from '@channel.io/bezier-react'
 import dynamic from 'next/dynamic'
 import type { BaseLayoutProps } from '@/layouts/BaseLayout/BaseLayout'
 import { BaseLayout } from '@/layouts/BaseLayout/BaseLayout'
@@ -22,15 +22,12 @@ export function AdminLayout({
   return (
     <Suspense
       fallback={
-        <HStack
-          justify="center"
-          align="center"
-        >
+        <Center height="100vh">
           <Spinner
             size="l"
             color="txt-black-dark"
           />
-        </HStack>
+        </Center>
       }
     >
       <AdminGuard>
@@ -48,7 +45,18 @@ export function AdminLayout({
               marginHorizontal="auto"
               padding={16}
             >
-              {children}
+              <Suspense
+                fallback={
+                  <Center height="100vh">
+                    <Spinner
+                      size="l"
+                      color="txt-black-dark"
+                    />
+                  </Center>
+                }
+              >
+                {children}
+              </Suspense>
             </Box>
           </HStack>
         </BaseLayout>
