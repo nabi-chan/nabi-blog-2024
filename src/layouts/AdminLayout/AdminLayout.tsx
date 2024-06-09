@@ -20,22 +20,22 @@ export function AdminLayout({
   ...props
 }: PropsWithChildren<AdminLayoutProps>) {
   return (
-    <Suspense
-      fallback={
-        <Center height="100vh">
-          <Spinner
-            size="l"
-            color="txt-black-dark"
-          />
-        </Center>
-      }
+    <BaseLayout
+      noindex
+      title={`고양이집 : ${title}`}
+      {...props}
     >
-      <AdminGuard>
-        <BaseLayout
-          noindex
-          title={`고양이집 : ${title}`}
-          {...props}
-        >
+      <Suspense
+        fallback={
+          <Center height="100vh">
+            <Spinner
+              size="l"
+              color="txt-black-dark"
+            />
+          </Center>
+        }
+      >
+        <AdminGuard>
           <HStack>
             <Sidebar />
             <Box
@@ -59,8 +59,8 @@ export function AdminLayout({
               </Suspense>
             </Box>
           </HStack>
-        </BaseLayout>
-      </AdminGuard>
-    </Suspense>
+        </AdminGuard>
+      </Suspense>
+    </BaseLayout>
   )
 }
