@@ -18,13 +18,12 @@ export function useDeleteArticleMutation() {
         .eq('id', articleId)
         .single()
         .throwOnError(),
-    onSuccess: async (_, { articleId }) => {
+    onSuccess: async () => {
       const {
         data: { session },
       } = await supabase.auth.getSession()
       assert(session?.access_token, 'session.access_token is undefined')
       await axios.patch<'ok'>('/api/blog/invalidate', undefined, {
-        params: { 'post-id': articleId },
         headers: {
           Authorization: `Bearer ${session.access_token}`,
         },
