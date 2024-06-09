@@ -1,7 +1,7 @@
 import { Spinner, VStack } from '@channel.io/bezier-react'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Suspense } from 'react'
-import { useRenderMarkdownToHTMLQueryObject } from '@/features/Viewer/queries/useRenderMarkdownToHTMLQueryObject'
+import { useRenderMarkdownToHTMLQueryObject } from '@/features/markdown/viewer/queries/useRenderMarkdownToHTMLQueryObject'
 import { Content } from './Viewer.styled'
 
 interface ViewerProps {

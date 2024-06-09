@@ -12,8 +12,8 @@ import assert from 'assert'
 import { supabase } from '@/supabase/server'
 import { PageHeader } from '@/components/PageHeader'
 import { SiteLayout } from '@/layouts/SiteLayout/SiteLayout'
-import { renderMarkdown } from '@/features/Viewer/utils/renderMarkdown'
-import { Content } from '@/features/Viewer/components/Viewer'
+import { renderMarkdown } from '@/features/markdown/viewer/utils/renderMarkdown'
+import { Content } from '@/features/markdown/viewer/components/Viewer'
 
 export const getStaticPaths = (async () => {
   const { data: posts } = await supabase

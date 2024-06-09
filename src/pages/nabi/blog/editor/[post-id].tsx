@@ -19,9 +19,9 @@ import assert from 'assert'
 import { AdminLayout } from '@/layouts/AdminLayout/AdminLayout'
 import { PageHeader } from '@/components/PageHeader'
 import { supabase } from '@/supabase/server'
-import { Editor } from '@/features/Editor/component'
-import { useUpdateArticleMutation } from '@/features/blog/queries/useUpdateArticleMutation'
-import { FileField } from '@/features/Editor/component/FileField'
+import { Editor } from '@/features/markdown/editor/component'
+import { useUpdateArticleMutation } from '@/features/admin/blog/queries/useUpdateArticleMutation'
+import { FileField } from '@/features/markdown/editor/component/FileField'
 
 export const getServerSideProps = (async (context) => {
   assert(context.params, 'context.params is empty, expected object')

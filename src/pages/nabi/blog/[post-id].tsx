@@ -14,8 +14,8 @@ import assert from 'assert'
 import { AdminLayout } from '@/layouts/AdminLayout/AdminLayout'
 import { PageHeader } from '@/components/PageHeader'
 import { supabase } from '@/supabase/server'
-import { Viewer } from '@/features/Viewer/components/Viewer'
-import { useDeleteArticleMutation } from '@/features/blog/queries/useDeleteArticleMutation'
+import { Viewer } from '@/features/markdown/viewer/components/Viewer'
+import { useDeleteArticleMutation } from '@/features/admin/blog/queries/useDeleteArticleMutation'
 
 export const getServerSideProps = (async (context) => {
   assert(context.params, 'context.params is empty, expected object')

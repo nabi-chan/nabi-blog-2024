@@ -8,8 +8,8 @@ import type { ReactNode } from 'react'
 import assert from 'assert'
 import { supabase } from '@/supabase/server'
 import { BaseLayout } from '@/layouts/BaseLayout/BaseLayout'
-import { renderMarkdown } from '@/features/Viewer/utils/renderMarkdown'
-import { Content } from '@/features/Viewer/components/Viewer'
+import { renderMarkdown } from '@/features/markdown/viewer/utils/renderMarkdown'
+import { Content } from '@/features/markdown/viewer/components/Viewer'
 import { CustomPageLayout } from '@/features/custom-pages/components/CustomPageLayout'
 
 export const getStaticPaths = (async () => {

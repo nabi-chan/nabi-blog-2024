@@ -25,11 +25,11 @@ import {
 } from '@channel.io/bezier-react'
 import type { HTMLProps } from 'react'
 import { Fragment, useMemo, useRef, useState } from 'react'
-import { useIgnoreKeyboardActionsWhileComposing } from '@/features/Editor/hooks/useIgnoreKeyboardActionWhileComposing'
-import { isModifierKey } from '@/features/Editor/utils/utils'
-import type { FormattingToolsHandlers } from '@/features/Editor/utils/_FormattingTools'
-import { FormattingTools } from '@/features/Editor/utils/_FormattingTools'
-import { Viewer } from '@/features/Viewer/components/Viewer'
+import { useIgnoreKeyboardActionsWhileComposing } from '@/features/markdown/editor/hooks/useIgnoreKeyboardActionWhileComposing'
+import { isModifierKey } from '@/features/markdown/editor/utils/utils'
+import type { FormattingToolsHandlers } from '@/features/markdown/editor/utils/_FormattingTools'
+import { FormattingTools } from '@/features/markdown/editor/utils/_FormattingTools'
+import { Viewer } from '@/features/markdown/viewer/components/Viewer'
 import EditorTextArea from './TextArea'
 
 interface EditorProps extends Omit<HTMLProps<HTMLTextAreaElement>, 'style'> {}

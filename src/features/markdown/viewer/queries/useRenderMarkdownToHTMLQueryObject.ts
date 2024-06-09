@@ -1,4 +1,4 @@
-import { renderMarkdown } from '@/features/Viewer/utils/renderMarkdown'
+import { renderMarkdown } from '@/features/markdown/viewer/utils/renderMarkdown'
 
 export function useRenderMarkdownToHTMLQueryObject(markdown: string) {
   return {
