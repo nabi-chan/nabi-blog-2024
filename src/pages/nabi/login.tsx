@@ -1,6 +1,7 @@
 import { KeyIcon } from '@channel.io/bezier-icons'
 import { VStack, Button } from '@channel.io/bezier-react'
 import { supabase } from '@/supabase/client'
+import { BaseLayout } from '@/layouts/BaseLayout/BaseLayout'
 
 export default function Page() {
   const handleClickLogin = () => {
@@ -13,19 +14,24 @@ export default function Page() {
   }
 
   return (
-    <VStack
-      justify="center"
-      align="center"
-      height="100vh"
-      padding={24}
+    <BaseLayout
+      noindex
+      title="고양이집 : 로그인"
     >
-      <Button
-        leftContent={KeyIcon}
-        onClick={handleClickLogin}
-        colorVariant="monochrome-dark"
-        styleVariant="secondary"
-        text="Github로 로그인하기"
-      />
-    </VStack>
+      <VStack
+        justify="center"
+        align="center"
+        height="100vh"
+        padding={24}
+      >
+        <Button
+          leftContent={KeyIcon}
+          onClick={handleClickLogin}
+          colorVariant="monochrome-dark"
+          styleVariant="secondary"
+          text="Github로 로그인하기"
+        />
+      </VStack>
+    </BaseLayout>
   )
 }
